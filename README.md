@@ -32,3 +32,49 @@ Original project had a 9V battery and 9V battery connector, add 7-8€ to the co
 Words
 =
 I used a 10x10 matrix for the characters/words, it's really easy to fit them all in a 10x11 matrix, but I wanted a 10x10 one. I use 4 additional leds on the corners to show the exact minute. 11 spots in the matrix are unused, I placed random characters on them and put leds behind.
+
+
+Since some of the characters of the 10x10 matrix could be lit at the same time you could avoid using two MAX7219, the following led-grouping could be optimized even more, but I'm happy with it. Minute-led are in groups 38-41, all extra characters are in group 42 (the last one)
+
+
+To light up words, we need to put ON the next groups:
+
+* ES: 1,2
+* SON: 2,3
+* LA: 4
+* LAS: 4,5
+* UNA: 6
+* DOS: 7
+* OCHO: 8,9
+* ONCE: 9,10
+* TRES: 11
+* CUATRO: 12
+* DIEZ: 13
+* NUEVE: 14,15,16
+* CINCO: 17
+* SIETE: 18,19,20
+* DOCE: 21
+* SEIS: 22,23,24
+* Y: 25
+* MENOS: 26,27,28
+* CUARTO: 29,30,31
+* VEINTE: 32
+* DIEZ: 33,34,35
+* MEDIA: 36
+* CINCO: 37
+* CEINTICINCO: 15,19,23,27,30,34,37
+
+
+
+Coding Max7219
+=
+You could use MAX7219 or MAX7221. In this code, to light up the led groups you need to follow the next table:
+
+
+For example, to light up the group #1, variable 'a1' needs to have a value of 128. To light up group #2 and #3, variable 'a1' next to be 96 (= 64+32).
+
+
+
+Schematic
+=
+First time using Fritzing or any other schematic editor, I know it's a mess and ugly, not sure how to resize the MAX7219 as it looks like the scale isn't right, but it's my first time! RTC clock (Macetech Chronodot) is a DS3132 but the connection is the same so I used the one it came with Fritxing. I also used two overlapping 5x7 led matrices to create the 6x7 I used, so numbers of input are wrong, but I thing you could get the picture.
