@@ -84,3 +84,22 @@ Schematic
 ![alt tag](https://raw.githubusercontent.com/conejoninja/WordClock/master/CLOCK.png)
 
 First time using Fritzing or any other schematic editor, I know it's a mess and ugly, not sure how to resize the MAX7219 as it looks like the scale isn't right, but it's my first time! RTC clock (Macetech Chronodot) is a DS3132 but the connection is the same so I used the one it came with Fritxing. I also used two overlapping 5x7 led matrices to create the 6x7 I used, so numbers of input are wrong, but I thing you could get the picture.
+
+
+Licenses
+=
+This is distributed under the Apache License v2.0 unless some library or code isn't compatible ):
+
+Copyright 2014 Daniel Esteban  -  conejo@conejo.me
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
