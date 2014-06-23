@@ -34,6 +34,8 @@ Words
 I used a 10x10 matrix for the characters/words, it's really easy to fit them all in a 10x11 matrix, but I wanted a 10x10 one. I use 4 additional leds on the corners to show the exact minute. 11 spots in the matrix are unused, I placed random characters on them and put leds behind.
 
 
+![alt tag](https://raw.githubusercontent.com/conejoninja/WordClock/master/LED.groups.png)
+
 Since some of the characters of the 10x10 matrix could be lit at the same time you could avoid using two MAX7219, the following led-grouping could be optimized even more, but I'm happy with it. Minute-led are in groups 38-41, all extra characters are in group 42 (the last one)
 
 
@@ -70,6 +72,7 @@ Coding Max7219
 =
 You could use MAX7219 or MAX7221. In this code, to light up the led groups you need to follow the next table:
 
+![alt tag](https://raw.githubusercontent.com/conejoninja/WordClock/master/relation.led.variable.png)
 
 For example, to light up the group #1, variable 'a1' needs to have a value of 128. To light up group #2 and #3, variable 'a1' next to be 96 (= 64+32).
 
@@ -77,4 +80,7 @@ For example, to light up the group #1, variable 'a1' needs to have a value of 12
 
 Schematic
 =
+
+![alt tag](https://raw.githubusercontent.com/conejoninja/WordClock/master/CLOCK.png)
+
 First time using Fritzing or any other schematic editor, I know it's a mess and ugly, not sure how to resize the MAX7219 as it looks like the scale isn't right, but it's my first time! RTC clock (Macetech Chronodot) is a DS3132 but the connection is the same so I used the one it came with Fritxing. I also used two overlapping 5x7 led matrices to create the 6x7 I used, so numbers of input are wrong, but I thing you could get the picture.
