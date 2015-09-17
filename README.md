@@ -1,6 +1,8 @@
 Spanish word clock with Arduino
 =
 
+![alt tag](https://raw.githubusercontent.com/conejoninja/WordClock/master/working.jpg)
+
 This is my Word clock in Spanish using an Arduino in a 10x10 matrix, I did it some years ago, and was hanging powered off on a wall of my kitchen for the same time due to some Arduino problems. I used an original Arduino (first model), and those had a small problem when they are powered by an external battery, making it implossible to boot propertly. Recently I decided to ditch out the old Arduino and replace it with a new nano model and power the whole thing with a USB wall adapter.
 
 
